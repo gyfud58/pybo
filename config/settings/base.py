@@ -26,6 +26,8 @@ SECRET_KEY = 'UGLE5H8n88CcbBcfpZa_94o5p5OLpV34YOzBa_Pd1QVMqdFBpc6aBUqLuTfhhYfgrZ
 DEBUG = True
 
 ALLOWED_HOSTS = ['3.34.191.141']
+# ALLOWED_HOSTS = ['52.78.8.100']
+
 
 
 # Application definition
