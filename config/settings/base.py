@@ -15,17 +15,17 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ls&1oied3t*np!^y6664m!j2-l%ie=8g$w-bjk_pjryzd#3y6b'
+SECRET_KEY = 'UGLE5H8n88CcbBcfpZa_94o5p5OLpV34YOzBa_Pd1QVMqdFBpc6aBUqLuTfhhYfgrZk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = ['43.202.15.63']
-ALLOWED_HOSTS = ['52.78.8.100']
+ALLOWED_HOSTS = ['3.34.191.141']
 
 
 # Application definition
