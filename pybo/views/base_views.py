@@ -5,8 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from ..models import Question
 
 
-def index(request):
-    3/0
+def index(request):+-
     """
     pybo 목록 출력
     """
@@ -21,6 +20,7 @@ def index(request):
     elif so == 'popular':
         question_list = Question.objects.annotate(num_answer=Count('answer')).order_by('-num_answer', '-create_date')
     else:  # recent
+
         question_list = Question.objects.order_by('-create_date')
 
     # 검색
