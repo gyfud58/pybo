@@ -130,11 +130,11 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-#로깅 설정
+# 로깅설정
 LOGGING = {
-    'version' : 1,
-    'disable)existing_loggers': False,
-    "filters": {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse',
         },
@@ -142,9 +142,9 @@ LOGGING = {
             '()': 'django.utils.log.RequireDebugTrue',
         },
     },
-    'formatter': {
-        'django.server':{
-            '()': 'django.utils.log.ServerFornatter',
+    'formatters': {
+        'django.server': {
+            '()': 'django.utils.log.ServerFormatter',
             'format': '[{server_time}] {message}',
             'style': '{',
         },
@@ -156,7 +156,7 @@ LOGGING = {
         'console': {
             'level': 'INFO',
             'filters': ['require_debug_true'],
-            'class': 'logging.StreamHandler'
+            'class': 'logging.StreamHandler',
         },
         'django.server': {
             'level': 'INFO',
@@ -169,16 +169,16 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler'
         },
         'file': {
-            'Level': 'INFO',
-            'filrers': ['require_dug_false'],
+            'level': 'INFO',
+            'filters': ['require_debug_false'],
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': BASE_DIR / 'logs/mysite.log',
-            'maxBytes': 1024*1024*5, # 5MB
+            'maxBytes': 1024*1024*5,  # 5 MB
             'backupCount': 5,
             'formatter': 'standard',
         },
     },
-    'loggers':{
+    'loggers': {
         'django': {
             'handlers': ['console', 'mail_admins', 'file'],
             'level': 'INFO',
@@ -187,6 +187,10 @@ LOGGING = {
             'handlers': ['django.server'],
             'level': 'INFO',
             'propagate': False,
+        },
+        'pybo': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
         },
     }
 }
